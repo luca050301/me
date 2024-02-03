@@ -1,0 +1,45 @@
+.header-component {
+  @apply tw-relative tw-p-4 tw-flex tw-justify-center tw-items-center tw-bg-primary-950 tw-z-50;
+
+  .header-logo {
+    @apply tw-text-3xl tw-font-bold tw-text-white tw-no-underline;
+  }
+
+  .header-toggle {
+    @apply xl:tw-hidden;
+
+    .header-toggle-btn {
+      @apply tw-flex tw-items-center tw-text-white tw-p-3 tw-bg-transparent tw-border-none;
+    }
+
+  }
+
+  .header-link {
+    @apply tw-text-sm tw-text-white tw-no-underline tw-min-w-[120px] tw-text-center;
+
+    &.active {
+      @apply tw-text-primary-400;
+    }
+
+  }
+
+}
+
+
+.mobile-menu {
+  @apply tw-transition-opacity tw-duration-700 tw-absolute tw-z-40 tw-bg-primary-900 tw-w-full tw-text-white tw-p-4 tw-shadow-2xl tw-rounded-b-lg;
+
+  > div.header-link-container {
+
+    @apply tw-my-2;
+
+    .header-link {
+      @apply tw-text-sm tw-text-white tw-no-underline tw-min-w-[120px] tw-text-center;
+
+      &.active {
+        @apply tw-text-success-300;
+      }
+
+    }
+  }
+}

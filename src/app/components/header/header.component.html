@@ -1,0 +1,58 @@
+<nav class="header-component">
+  <div class="tw-flex-1">
+    <a class="header-logo" href="">Luca Moser</a>
+  </div>
+  <div class="header-toggle">
+    <button class="header-toggle-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            (click)="toggleMobileMenu()" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+      <svg class="tw-block tw-h-6 tw-w-6 tw-fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+        <title>Mobile menu</title>
+        <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- For Desktop -->
+
+  <div class="tw-text-white tw-hidden xl:tw-flex tw-items-center tw-mr-5">
+    <a class="header-link" routerLink="/home" routerLinkActive="active">
+      <div class="tw-h-6">
+        <ng-icon size="24" class="tw-block tw-text-center tw-w-full" name="matHome"></ng-icon>
+      </div>
+      Home
+    </a>
+
+    <a class="header-link" routerLink="/projects" routerLinkActive="active">
+      <div class="tw-h-6">
+        <ng-icon size="24" class="tw-block tw-text-center tw-w-full" name="matCode"></ng-icon>
+      </div>
+      Projects
+    </a>
+  </div>
+  <div class="xl:tw-flex-1"></div> <!-- required for centering -->
+
+</nav>
+
+<!-- For Mobile -->
+
+<div *ngIf="showMobileMenu" [@inOutAnimation] class="mobile-menu">
+  <div class="header-link-container">
+    <a (click)="toggleMobileMenu()"
+       class="header-link" routerLink="/home" routerLinkActive="active">
+      <div class="tw-flex tw-items-center tw-gap-x-2">
+        <ng-icon size="24" name="matHome"></ng-icon>
+        Home
+      </div>
+    </a>
+  </div>
+  <div class="header-link-container">
+    <a (click)="toggleMobileMenu()"
+       class="header-link" routerLink="/projects" routerLinkActive="active">
+      <div class="tw-flex tw-items-center tw-gap-x-2">
+        <ng-icon size="24" name="matCode"></ng-icon>
+        Projects
+      </div>
+    </a>
+  </div>
+</div>
