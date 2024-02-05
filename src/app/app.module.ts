@@ -18,6 +18,7 @@ import {
   matBookmarkAdded,
   matCheck,
   matClear,
+  matCode,
   matCoffee,
   matDelete,
   matDiamond,
@@ -28,7 +29,6 @@ import {
   matHighlightOff,
   matHistory,
   matHome,
-  matCode,
   matInfo,
   matLocalFireDepartment,
   matLogin,
@@ -47,18 +47,21 @@ import {
   matWaterDrop,
   matWhatsapp
 } from '@ng-icons/material-icons/baseline';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
+import {faAt} from '@fortawesome/free-solid-svg-icons';
 
 import {BrowserModule} from "@angular/platform-browser";
 import {AppRoutingModule} from "./app-routing.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {CommonModule} from "@angular/common";
+import {ProjectsPageComponent} from "./components/projects/projects-page/projects-page.component";
+import {TechnologyIconComponent} from "./components/common/technology-icon/technology-icon.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [AppComponent, HeaderComponent, FooterComponent, ProjectsPageComponent],
   imports: [BrowserModule, RouterOutlet,
     RouterTestingModule, AppRoutingModule,
-    BrowserAnimationsModule,
+    BrowserAnimationsModule, CommonModule,
     NgIconsModule.withIcons({
       matHistory,
       matCode,
@@ -100,7 +103,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       matSportsGymnastics,
       matAddTask,
       matLogin
-    }), RouterLink, RouterLinkActive, FontAwesomeModule
+    }), RouterLink, RouterLinkActive, FontAwesomeModule, TechnologyIconComponent
 
   ],
   bootstrap: [AppComponent]
