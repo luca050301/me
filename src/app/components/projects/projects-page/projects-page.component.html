@@ -1,29 +1,33 @@
 <p class="tw-text-xl">I am currently working on exciting projects in the world of mobile and web development!</p>
+<p class="tw-text-xl">This project page is still WIP, however, these are the main technologies I use for my work:</p>
 
-<div class="tw-my-4 tw-ml-10">
-  <h2 class="tw-mt-8">Mobile Development</h2>
-  <p>I focus on mobile development of native apps for Android, using the following techs:</p>
-  <div class="tw-flex tw-flex-row tw-flex-wrap">
-    <ng-container *ngFor="let tech of mobileDevTechs">
-      <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
-                           [fontColor]="tech.fontColor"></app-technology-icon>
-    </ng-container>
+<div class="tw-my-4 tw-mx-6 tw-text-white">
+  <div class="tw-mt-8 tw-bg-gray-700 tw-rounded-2xl tw-p-4">
+    <h2>Mobile Development</h2>
+    <p>I focus on mobile development of native apps for Android, using the following techs:</p>
+    <div class="tw-flex tw-flex-row tw-flex-wrap">
+      <ng-container *ngFor="let tech of mobileDevTechs">
+        <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
+                             [fontColor]="tech.fontColor"></app-technology-icon>
+      </ng-container>
+    </div>
   </div>
+  <div class="tw-mt-8 tw-bg-gray-700 tw-rounded-2xl tw-p-4">
+    <h2>Web Development</h2>
+    <p>I also work on web development, with a focus on the Angular framework:</p>
+    <div class="tw-flex tw-flex-row tw-flex-wrap">
+      <ng-container *ngFor="let tech of webDevTechs">
+        <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
+                             [fontColor]="tech.fontColor"></app-technology-icon>
+      </ng-container>
+    </div>
 
-  <h2 class="tw-mt-8">Web Development</h2>
-  <p>I also work on web development, with a focus on the Angular framework:</p>
-  <div class="tw-flex tw-flex-row tw-flex-wrap">
-    <ng-container *ngFor="let tech of webDevTechs">
-      <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
-                           [fontColor]="tech.fontColor"></app-technology-icon>
-    </ng-container>
-  </div>
-
-  <p>For the backend I often work with Spring and various AWS services</p>
-  <div class="tw-flex tw-flex-row tw-flex-wrap">
-    <ng-container *ngFor="let tech of backendTechs">
-      <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
-                           [fontColor]="tech.fontColor"></app-technology-icon>
-    </ng-container>
+    <p>For the backend I often work with Spring and various AWS services</p>
+    <div class="tw-flex tw-flex-row tw-flex-wrap">
+      <ng-container *ngFor="let tech of backendTechs">
+        <app-technology-icon [name]="tech.name" [backgroundColor]="tech.backgroundColor"
+                             [fontColor]="tech.fontColor"></app-technology-icon>
+      </ng-container>
+    </div>
   </div>
 </div>
